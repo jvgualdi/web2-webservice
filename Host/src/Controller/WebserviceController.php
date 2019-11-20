@@ -7,7 +7,7 @@ class WebserviceController extends Controller
 
   public function loadFeedAction()
   {
-    $url = 'http://localhost/index.php?target=ws';
+    $url = 'localhost/web2-webservice/Host/index.php?target=ws';
 
     $data = array('token' => '202cb962ac59075b964b07152d234b70');
 
@@ -29,6 +29,7 @@ class WebserviceController extends Controller
 
     curl_close($curl);
 
+
     $json = json_decode($json, true);
 
     if(is_null($json))
@@ -38,8 +39,7 @@ class WebserviceController extends Controller
     {
 
       $publications = array();
-
-      foreach ($json as $publication) 
+      foreach ($json as $publication)
       {
         $newPub = new Publication();
 
@@ -48,11 +48,11 @@ class WebserviceController extends Controller
         $newPub->setTime($publication['time']);
         $newPub->setPath($publication['path']);
 
-        $publications[] = $newPub;  
-        
+        $publications[] = $newPub;
+
       }
     }
-   
+
     $controller = new PublicationController();
     $controller->feedAction($publications);
     return;
