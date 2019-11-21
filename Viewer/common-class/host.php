@@ -1,3 +1,3 @@
-<?php 
-	$server = '172.21.6.37';
+<?php
+	$server = 'localhost';
 ?>

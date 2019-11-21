@@ -4,7 +4,7 @@
       <h1 class="jumbotron-heading"><strong># CodeHumor - Administrador</strong></h1>
       <p class="lead text-muted">Dedicated to humor and jokes relating to programmers and programming.</p>
 			<p>
-			 <a href="index.php?controller=Publication&action=create" class="btn btn-primary my-2">Enviar publicação</a>
+			 <a href="index.php?controller=Publication&action=create" class="btn btn-lg btn-primary my-2">Enviar publicação</a>
 		 </p>
     </div>
   </section>
@@ -25,8 +25,8 @@
 							<p class="card-text text-center"><small class="text-muted">Publicado em: <?= $pub->getTime() ?></small></p>
               <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <a href="index.php?controller=Publication&action=delete&id=<?= $pub->getId() ?>" class="btn btn-sm btn-outline-danger">Remover</a>
-                      <a href="index.php?controller=Publication&action=update&id=<?= $pub->getId() ?>" class="btn btn-sm btn-outline-success">Editar</a>
+                      <a href="index.php?controller=Publication&action=delete&id=<?= $pub->getId() ?>" class="btn btn-sm btn-outline-danger mx-1">Remover</a>
+                      <a href="index.php?controller=Publication&action=update&id=<?= $pub->getId() ?>" class="btn btn-sm btn-outline-success mx-1">Editar</a>
                     </div>
                   </div>
             </div>
