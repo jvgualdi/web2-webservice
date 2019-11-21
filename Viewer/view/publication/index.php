@@ -18,7 +18,7 @@
           <div class="card mb-6 shadow-sm publication">
             <img class="img-fluid" src="<?= $pub->getPath() ?>"><br>
             <div class="card-body">
-              <p class="card-text text-center"><strong><?= $pub->getTitle() ?></strong></p>
+              <h3 class="card-text text-center"><strong><?= $pub->getTitle() ?></strong></h3>
 							<p class="card-text text-center"><small class="text-muted">Publicado em: <?= $pub->getTime() ?></small></p>
               <div class="d-flex justify-content-between align-items-center">
 

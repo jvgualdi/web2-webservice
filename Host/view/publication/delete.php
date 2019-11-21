@@ -17,16 +17,15 @@
                       <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Título" value="<?= $pub->getTitle() ?>" disabled>
                     <p class="card-text text-center"><small class="text-muted">Publicado em: <?= $pub->getTime() ?></small></p>
                     <center>
-                      <button type="submit" name="save" class="btn btn-danger">Remover</button>
-                      <a href="index.php"class="btn btn-light">Voltar</a>
+                      <button type="submit" name="save" class="btn btn-outline-danger mx-1">Remover</button>
+                      <a href="index.php"class="btn btn-outline-light mx-1">Voltar</a>
                     </center>
                   </div>
                 </div>
               </div>
-            </div>           
+            </div>
           </form>
         </div>
       </div>
     </div>
 </main>
-
