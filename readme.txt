@@ -23,7 +23,7 @@ CREATE DATABASE codehumor;
 CREATE TABLE _publication(
     id serial,
     path character varying,
-    title character varyingr,
+    title character varying,
     time timestamp without time zone,
     primary key(id)
 );
