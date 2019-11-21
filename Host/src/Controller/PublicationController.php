@@ -63,8 +63,10 @@ class PublicationController extends Controller
 
         $uploadfile = $basePath . $now->format('YmdHis') . basename($_FILES['meme']['name']);
 
-        if (move_uploaded_file($_FILES['meme']['tmp_name'], $uploadfile))
-          echo 'ok';
+        if (move_uploaded_file($_FILES['meme']['tmp_name'], $uploadfile)){
+          //Tudo certo
+
+        }
         else
           throw new Exception("Falha ao enviar imagem");
           
@@ -82,7 +84,8 @@ class PublicationController extends Controller
         else
           throw new Exception('Problema ao publicar');
         
-        $this->setRoute($this->view->getIndexRoute());
+        $this->indexAction();
+        return;
       }
       catch(Exception $e)
       {

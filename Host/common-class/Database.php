@@ -33,7 +33,7 @@ class Database
 	 */
 	private $array = array ('sgbd'		=> 'PostgreSQL',
 							'host'		=> 'localhost',
-							'name'		=> 'leurso',
+							'name'		=> 'codehumor',
 							'port'		=> '5432',
 							'schema'	=> 'public',
 							'user'		=> 'postgres',
