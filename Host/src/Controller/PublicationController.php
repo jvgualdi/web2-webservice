@@ -102,18 +102,98 @@ class PublicationController extends Controller
     return;
   }
 
-  public function listAction()
+  public function updateAction()
   { 
-    $publicationDao = new PublicationDao();
+    $message = Message::singleton();
     
-    $viewModel = array(
-        'publications' => $publicationDao->getAll(),
-      );
+    $viewModel = array();
 
-    $this->setRoute($this->view->getListRoute());
+    $id = isset($_GET['id']) ? $_GET['id'] : '';
     
+    if(array_key_exists ('save', $_POST))
+    {
+      
+      $title =  array_key_exists ('title', $_POST) ? $_POST['title'] : '';
+      
+      try
+      {
+        
+        if(empty($title))
+          throw new Exception('Dê um título ao seu meme');
+  
+        $publication = new Publication();
+        $publication->setId($id);
+        $publication->setTitle($title);
+
+        $publicationDao = new PublicationDao(); 
+      
+        if($publicationDao->update($publication))
+          $message->addMessage('Sua publicação foi alterada');
+        else
+          throw new Exception('Problema ao alterar');
+        
+        $this->indexAction();
+        return;
+      }
+      catch(Exception $e)
+      {
+        $this->setRoute($this->view->getCreateRoute()); 
+        
+        $message->addWarning($e->getMessage());
+      }
+    }
+    else{
+      $this->setRoute($this->view->getUpdateRoute()); 
+      $viewModel = array(
+        'publication' => $this->publicationDao->getById($id)
+      );
+    }
+
     $this->showView($viewModel);
+
+    return;
+  }
+
+  public function deleteAction()
+  { 
+    $message = Message::singleton();
     
+    $viewModel = array();
+
+    $id = isset($_GET['id']) ? $_GET['id'] : '';
+    
+    if(array_key_exists ('save', $_POST))
+    {
+
+      try
+      {
+        
+        $publicationDao = new PublicationDao(); 
+      
+        if($publicationDao->delete($id))
+          $message->addMessage('Sua publicação foi removida');
+        else
+          throw new Exception('Problema ao remover');
+        
+        $this->indexAction();
+        return;
+      }
+      catch(Exception $e)
+      {
+        $this->setRoute($this->view->getDeleteRoute()); 
+        
+        $message->addWarning($e->getMessage());
+      }
+    }
+    else{
+      $this->setRoute($this->view->getDeleteRoute()); 
+      $viewModel = array(
+        'publication' => $this->publicationDao->getById($id)
+      );
+    }
+
+    $this->showView($viewModel);
+
     return;
   }
 

@@ -24,8 +24,11 @@
               <p class="card-text text-center"><strong><?= $pub->getTitle() ?></strong></p>
 							<p class="card-text text-center"><small class="text-muted">Publicado em: <?= $pub->getTime() ?></small></p>
               <div class="d-flex justify-content-between align-items-center">
-
-              </div>
+                    <div class="btn-group">
+                      <a href="index.php?controller=Publication&action=delete&id=<?= $pub->getId() ?>" class="btn btn-sm btn-outline-danger">Remover</a>
+                      <a href="index.php?controller=Publication&action=update&id=<?= $pub->getId() ?>" class="btn btn-sm btn-outline-success">Editar</a>
+                    </div>
+                  </div>
             </div>
           </div>
         </div>
