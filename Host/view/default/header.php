@@ -7,7 +7,7 @@
             <meta name="author" content="">
             <link rel="icon" href="../../../../favicon.ico">
 
-            <title>Le Urso</title>
+            <title>#CodeHumor - Administrador</title>
 
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
             <link rel="stylesheet" href="view/css/style.css">
@@ -26,6 +26,10 @@
                 <div class="col-sm-8 col-md-7 py-4">
                   <h4 class="text-white">Sobre</h4>
                   <p class="text-muted">O CodeHumor é um projeto desenvolvido como trabalho da disciplina ProgWeb2 no curso de Sistemas de Informação da Universidade Federal de Mato Grosso do Sul. O intuito do projeto é desenvolver uma aplicação usando os conceitos de WebService, dito isso todas as publicações são carregadas de um JSON enviado por outra aplicação.</p>
+                  <p>
+                   <a href="index.php?target=ws" class="btn btn-success my-2">Ver JSON</a>
+                   <a href="//localhost/web2-webservice/Viewer/index.php" class="btn btn-secondary my-2">Visualizar como leitor</a>
+                 </p>
                 </div>
                 <div class="col-sm-4 offset-md-1 py-4">
                   <h4 class="text-white">Alunos</h4>

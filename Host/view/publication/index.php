@@ -5,12 +5,11 @@
       <p class="lead text-muted">Dedicated to humor and jokes relating to programmers and programming.</p>
 			<p>
 			 <a href="index.php?controller=Publication&action=create" class="btn btn-primary my-2">Enviar publicação</a>
-			 <a href="//localhost/web2-webservice/Viewer/index.php" class="btn btn-secondary my-2">Visualizar como leitor</a>
 		 </p>
     </div>
   </section>
 
-  <div class="album py-5 bg-light">
+  <div class="album bg-light">
     <div class="container">
 
       <div class="row">
