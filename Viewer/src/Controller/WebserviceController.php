@@ -2,12 +2,14 @@
 
 class WebserviceController extends Controller
 {
-
+	
   public function __construct() {}
 
   public function loadFeedAction()
   {
-    $url = 'localhost/web2-webservice/Host/index.php?target=ws';
+	require_once('common-class/host.php');
+	
+	$url = $server . '/web2-webservice/Host/index.php?target=ws';
 
     $data = array('token' => '202cb962ac59075b964b07152d234b70');
 

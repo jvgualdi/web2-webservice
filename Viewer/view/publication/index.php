@@ -1,12 +1,8 @@
 <main role="main">
-  <section class="jumbotron text-center">
+  <section class="jumbotron text-center my-0">
     <div class="container">
       <h1 class="jumbotron-heading"><strong># CodeHumor</strong></h1>
       <p class="lead text-muted">Dedicated to humor and jokes relating to programmers and programming.</p>
-			<p>
-				<a href="//localhost/web2-webservice/Host/index.php?target=ws" class="btn btn-primary my-2">Json recebido</a>
-			 	<a href="//localhost/web2-webservice/Host/index.php" class="btn btn-secondary my-2">Paínel de administrador</a>
-		 </p>
     </div>
   </section>
 
