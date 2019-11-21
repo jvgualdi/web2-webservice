@@ -29,10 +29,10 @@ CREATE TABLE _publication(
 );
 
 INSERT INTO _publication (title, path, time)
-VALUES ('Diminuiu o QI da rua inteira', '20191121014150noobs.jpg', '2019-11-21 01:41:50');
+VALUES ('Diminuiu o QI da rua inteira', 'media/20191121014150noobs.jpg', '2019-11-21 01:41:50');
 
 INSERT INTO _publication (title, path, time)
-VALUES ('Excel pra quê??', '20191121013318excel.jpg', '2019-11-21 01:33:18');
+VALUES ('Excel pra quê??', 'media/20191121013318excel.jpg', '2019-11-21 01:33:18');
 
 INSERT INTO _publication (title, path, time)
-VALUES ('Boas Práticas de Programação', '20191121011557hmmmmm.jpg', '2019-11-21 01:15:57');
+VALUES ('Boas Práticas de Programação', 'media/20191121011557hmmmmm.jpg', '2019-11-21 01:15:57');
