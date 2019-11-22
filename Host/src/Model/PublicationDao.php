@@ -54,7 +54,7 @@ class PublicationDao
 
     $db = Database::singleton();
 
-    $sql = 'SELECT * FROM ' . self::_table . ' ORDER BY id DESC';
+    $sql = 'SELECT * FROM ' . self::_table . ' ORDER BY time DESC';
     
     $sth = $db->prepare($sql);
 

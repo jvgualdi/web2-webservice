@@ -17,6 +17,7 @@
             </div>
 
             <button type="submit" name="save" class="btn btn-primary">Enviar</button>
+            <a href="index.php"class="btn btn-outline-info mx-1">Voltar</a>
           </form>
         </div>
       </div>
