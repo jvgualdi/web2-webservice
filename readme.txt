@@ -13,9 +13,6 @@ Alunos
     Luca Fidelis
     Thiago Palhari
 
-
-Link do Github: https://github.com/luscafidelis/web2-webservice
-
 Script de criação do banco de dados e inserção de imagens que já estão no diretório media/
 
 CREATE DATABASE codehumor;
