@@ -2,6 +2,8 @@ Repositório do Trabalho de Prog Web2 - UFMS 2019
 
 Antes de executar, remova o '-master' do nome do diretório extraído.
 
+Link para o vídeo demonstração no Youtube: https://youtu.be/Y9hJ5eRIIEc
+
 O #CodeHumor é um projeto desenvolvido como trabalho da disciplina ProgWeb2 no curso de Sistemas de Informação da UFMS.
 O intuito do projeto é desenvolver uma aplicação usando os conceitos de WebService,
 dito isso todas as publicações são carregadas de um JSON enviado por outra aplicação.
