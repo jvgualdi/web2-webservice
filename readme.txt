@@ -36,3 +36,13 @@ VALUES ('Excel pra quê??', 'media/20191121013318excel.jpg', '2019-11-21 01:33:1
 
 INSERT INTO _publication (title, path, time)
 VALUES ('Boas Práticas de Programação', 'media/20191121011557hmmmmm.jpg', '2019-11-21 01:15:57');
+
+INSERT INTO _publication (title, path, time)
+VALUES ('COOKIES!!', 'media/20191121011500cookies.jpg', '2019-11-21 01:15:00');
+
+INSERT INTO _publication (title, path, time)
+VALUES ('Programadores JS', 'media/20191121021531concat.jpg', '2019-11-21 02:15:31');
+
+INSERT INTO _publication (title, path, time)
+VALUES ('Fácil demais!!', 'media/20191120174206drones.jpg', '2019-11-20 17:42:06');
+
