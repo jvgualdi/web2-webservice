@@ -45,4 +45,3 @@ VALUES ('Programadores JS', 'media/20191121021531concat.jpg', '2019-11-21 02:15:
 
 INSERT INTO _publication (title, path, time)
 VALUES ('Fácil demais!!', 'media/20191120174206drones.jpg', '2019-11-20 17:42:06');
-
