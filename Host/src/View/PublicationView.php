@@ -12,6 +12,13 @@ class PublicationView
 	{
 		return 'publication/create.php';
 	}
-	
+	public function getUpdateRoute()
+	{
+		return 'publication/update.php';
+	}
+	public function getDeleteRoute()
+	{
+		return 'publication/delete.php';
+	}
 	
 }

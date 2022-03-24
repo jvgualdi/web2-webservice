@@ -21,6 +21,20 @@ class PublicationDao
     return $sth->execute();
   }
 
+  public function update($publication)
+  {
+    $db = Database::singleton();
+
+    $sql = 'UPDATE ' . self::_table . ' SET title = ? WHERE id = ?';
+    
+    $sth = $db->prepare($sql);
+
+    $sth->bindValue(1, $publication->getTitle(), PDO::PARAM_STR);
+    $sth->bindValue(2, $publication->getId(), PDO::PARAM_INT);
+    
+    return $sth->execute();
+  }
+
   public function delete($id)
   {  
     $db = Database::singleton();
@@ -40,7 +54,7 @@ class PublicationDao
 
     $db = Database::singleton();
 
-    $sql = 'SELECT * FROM ' . self::_table . ' ORDER BY id DESC';
+    $sql = 'SELECT * FROM ' . self::_table . ' ORDER BY time DESC';
     
     $sth = $db->prepare($sql);
 
@@ -60,6 +74,31 @@ class PublicationDao
     }
     
     return $publications;  
+  }
+
+  public function getById($id)
+  {
+
+    $db = Database::singleton();
+
+    $sql = 'SELECT * FROM ' . self::_table . ' WHERE id = ' . $id;
+    
+    $sth = $db->prepare($sql);
+
+    $sth->execute();
+
+    if($obj = $sth->fetch(PDO::FETCH_OBJ))
+    {
+      $publication = new Publication();
+      $publication->setId($obj->id);
+      $publication->setTitle($obj->title);
+      $publication->setTime($obj->time);
+      $publication->setPath($obj->path);
+
+      return $publication; 
+    }
+    
+    return false;  
   }
 
 }
